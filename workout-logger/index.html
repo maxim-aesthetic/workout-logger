@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Logger & Progress Tracker</title>
+  <meta name="description" content="Log your gym workouts, track sets, reps and weight, visualize progress and hit new personal records. 100% local, no account needed." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">🏋️ <span>Workout Logger</span></div>
+    <nav class="nav" id="nav">
+      <a href="#/log" data-route="log">Log</a>
+      <a href="#/history" data-route="history">History</a>
+      <a href="#/progress" data-route="progress">Progress</a>
+      <a href="#/prs" data-route="prs">PRs</a>
+    </nav>
+  </header>
+
+  <main id="view" class="view" aria-live="polite"></main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="app-footer">
+    <p>100% local — your data stays in your browser.
+      <button id="exportBtn" class="link-btn">Export</button> ·
+      <button id="importBtn" class="link-btn">Import</button>
+    </p>
+    <input type="file" id="importFile" accept="application/json" hidden />
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
